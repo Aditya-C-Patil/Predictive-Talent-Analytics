@@ -125,4 +125,5 @@ Predictive-Talent-Analytics/
 │   ├── role_skills_map.pkl
 │   └── all_skills.pkl
 ├── requirements.txt    # Pinned Python package dependencies
+├── DECISIONS.md        # Architecture Decision Records
 └── README.md           # Engineering documentation
