@@ -48,7 +48,7 @@ This document records the key architectural choices, data engineering trade-offs
 
 ### ADR-004: Dual-Metric Formulation (Coverage Ratio vs. Model Likelihood)
 * **Status:** Accepted
-* **Context:** Probabilistic classifiers distribute likelihood across classes ($P(y = c \mid \vec{x})$), meaning a candidate matching 100% of the skills for three distinct roles will see split likelihoods (e.g., $34\%$, $28\%$, $8\%$). Users often misinterpret this as low qualification.
+* **Context:** Probabilistic classifiers distribute likelihood across classes, meaning a candidate matching 100% of the skills for three distinct roles will see split likelihoods (e.g., $34\%$, $28\%$, $8\%$). Users often misinterpret this as low qualification.
 * **Decision:** Decoupled evaluation into two complementary metrics:
   1. **Competency Coverage ($\%$):** Deterministic ratio $\frac{\text{Matched User Skills}}{\text{Total Required Role Skills}} \times 100$.
   2. **Model Likelihood ($\%$):** Random Forest ensemble voting distribution reflecting global feature uniqueness and dataset priors.
